@@ -26,7 +26,7 @@ namespace AdventOfCodePreset.Base
                 string[] expected = File.ReadAllLines(Prefix(OutPath, exeptedFile));
                 return CheckAnswer(value, expected);
             }
-            Console.Write($"Create {file}");
+            Console.WriteLine($"Create {file}");
             return false;
         }
         public void OutputGenerating(string[] input)
