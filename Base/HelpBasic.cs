@@ -13,5 +13,15 @@ namespace AdventOfCodePreset.Base
             => $"{path}\\{file}";
         public string GetFile(string fileName, string fileExtension)
             => $"{fileName}.{fileExtension}";
+        public bool TryReadFile(string path, out string[] lines)
+        {
+            lines = default!;
+            bool exists = File.Exists(path);
+            if(exists)
+            {
+                lines = File.ReadAllLines(path);
+            }
+            return exists;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCodePreset.Base
 {
-    public abstract class AoCBase<TIn> : HelpBasic, IAoC<TIn> 
+    public abstract class AoCBase<TIn> : HelpBasic, IAoC<TIn>
     {
         protected AoCBase()
         {
@@ -20,27 +20,26 @@ namespace AdventOfCodePreset.Base
 
         public bool TestSolution(string file, string exeptedFile)
         {
-            string[] input = File.ReadAllLines(Prefix(InPath, file));
-            string[] value = Solution(input);
-            string[] expected = File.ReadAllLines(Prefix(OutPath, exeptedFile));
-            return CheckAnswer(value, expected);
+            if (TryReadFile(Prefix(InPath, file), out string[] input))
+            {
+                string[] value = Solution(input);
+                string[] expected = File.ReadAllLines(Prefix(OutPath, exeptedFile));
+                return CheckAnswer(value, expected);
+            }
+            Console.Write($"Create {file}");
+            return false;
         }
         public void OutputGenerating(string[] input)
         {
-            try
-            {
-                File.WriteAllLines(Prefix(OutPath, GetFile(ORIGINAL_NAME, OUTPUT_ENDING)), input);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            File.WriteAllLines(Prefix(OutPath, GetFile(ORIGINAL_NAME, OUTPUT_ENDING)), input);
+            foreach(string line in input)
+                Console.WriteLine(line);
         }
         private bool CheckAnswer(string[] value, string[] answer)
         {
-            bool solution = value[0] == answer[0] 
+            bool solution = value[0] == answer[0]
                 & value.Length == answer.Length;
-            for(int i = 1; i < answer.Length & solution; i++)
+            for (int i = 1; i < answer.Length & solution; i++)
             {
                 solution = value[i] == answer[i];
             }
