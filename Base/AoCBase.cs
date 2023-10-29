@@ -7,20 +7,14 @@ using System.Threading.Tasks;
 namespace AdventOfCodePreset.Base
 {
     public abstract class AoCBase<TIn> : HelpBasic, IAoC<TIn> 
-        where TIn : IParsable<TIn>
     {
-        protected string InPath = Directory.GetCurrentDirectory() + "\\input";
-        protected string OutPath = Directory.GetCurrentDirectory() + "\\output";
-        protected string ExampleEnding = "ex";
-        protected string InputEnding = "in";
-        protected string OutputEnding = "out";
         protected AoCBase()
         {
             CreateFolder(InPath);
             CreateFolder(OutPath);
         }
 
-        public abstract TIn Parse();
+        public abstract TIn Parse(string[] input);
 
         public abstract string[] Solution(string[] input);
 
@@ -35,7 +29,7 @@ namespace AdventOfCodePreset.Base
         {
             try
             {
-                File.WriteAllLines(Prefix(OutPath, GetFile("output", OutputEnding)), input);
+                File.WriteAllLines(Prefix(OutPath, GetFile(ORIGINAL_NAME, OUTPUT_ENDING)), input);
             }
             catch(Exception ex)
             {

@@ -7,28 +7,39 @@ using System.Threading.Tasks;
 
 namespace AdventOfCodePreset.Base
 {
+    /// <summary>
+    /// Create a instance for a AoC solution
+    /// </summary>
+    /// <typeparam name="TOut">Output type</typeparam>
+    /// <typeparam name="TIn">Input type</typeparam>
     public class WorkingClass<TOut, TIn> : AoCBase<TIn> 
-        where TIn : IParsable<TIn> where TOut : IParsable<TOut>
     {
-        public WorkingClass()
+        private readonly Func<string[], TIn> _parser;
+        private readonly Func<TIn, string[]> _solution;
+        public WorkingClass(Func<string[], TIn> parser, Func<TIn, string[]> solution)
+            : base()
         {
-            bool exampleTest = TestSolution(GetFile("input", ExampleEnding), GetFile("output", ExampleEnding));
-            if(exampleTest)
+            bool exampleTest = TestSolution(GetFile(SAMPLE_NAME, INPUT_ENDING), GetFile(SAMPLE_NAME, OUTPUT_ENDING));
+            if (exampleTest)
             {
-                string[] input = File.ReadAllLines(Prefix(InPath, GetFile("input", InputEnding)));
+                string[] input = File.ReadAllLines(Prefix(InPath, GetFile(ORIGINAL_NAME, INPUT_ENDING)));
                 string[] output = Solution(input);
                 OutputGenerating(output);
             }
+            Console.Write($"Output:{exampleTest}");
+            _parser = parser;
+            _solution = solution;
         }
 
-        public override TIn Parse()
+        public override TIn Parse(string[] input)
         {
-            throw new NotImplementedException();
+            return _parser(input);
         }
 
         public override string[] Solution(string[] input)
         {
-            throw new NotImplementedException();
+            TIn parsedInput = Parse(input);
+            return _solution(parsedInput);
         }
     }
 }
