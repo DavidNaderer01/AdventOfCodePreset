@@ -8,6 +8,6 @@
 6. Open the folder output and add *sample.out* with the result of advent of code
 7. Write your code
 8. Let it run
-9. If it says true then copy the content of *origin.out* and paste it in the answer field of advent of code
+9. If it says true then copy the content of *origin.out* or in terminal and paste it in the answer field of advent of code
 
 ## Good luck !
