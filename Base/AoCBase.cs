@@ -22,7 +22,7 @@ namespace AdventOfCodePreset.Base
         {
             string[] input = File.ReadAllLines(Prefix(InPath, file));
             string[] value = Solution(input);
-            string[] expected = File.ReadAllLines(Prefix(OutPath, file));
+            string[] expected = File.ReadAllLines(Prefix(OutPath, exeptedFile));
             return CheckAnswer(value, expected);
         }
         public void OutputGenerating(string[] input)
@@ -39,7 +39,7 @@ namespace AdventOfCodePreset.Base
         private bool CheckAnswer(string[] value, string[] answer)
         {
             bool solution = value[0] == answer[0] 
-                & value.Length != answer.Length;
+                & value.Length == answer.Length;
             for(int i = 1; i < answer.Length & solution; i++)
             {
                 solution = value[i] == answer[i];

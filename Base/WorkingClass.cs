@@ -19,6 +19,8 @@ namespace AdventOfCodePreset.Base
         public WorkingClass(Func<string[], TIn> parser, Func<TIn, string[]> solution)
             : base()
         {
+            _parser = parser;
+            _solution = solution;
             bool exampleTest = TestSolution(GetFile(SAMPLE_NAME, INPUT_ENDING), GetFile(SAMPLE_NAME, OUTPUT_ENDING));
             if (exampleTest)
             {
@@ -27,8 +29,6 @@ namespace AdventOfCodePreset.Base
                 OutputGenerating(output);
             }
             Console.Write($"Output:{exampleTest}");
-            _parser = parser;
-            _solution = solution;
         }
 
         public override TIn Parse(string[] input)

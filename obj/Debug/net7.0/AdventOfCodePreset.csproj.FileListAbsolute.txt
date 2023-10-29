@@ -1,0 +1,5 @@
+C:\Users\david\OneDrive\Desktop\Schule\Github\AdventOfCodePreset\obj\Debug\net7.0\AdventOfCodePreset.csproj.AssemblyReference.cache
+C:\Users\david\OneDrive\Desktop\Schule\Github\AdventOfCodePreset\obj\Debug\net7.0\AdventOfCodePreset.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\OneDrive\Desktop\Schule\Github\AdventOfCodePreset\obj\Debug\net7.0\AdventOfCodePreset.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Desktop\Schule\Github\AdventOfCodePreset\obj\Debug\net7.0\AdventOfCodePreset.AssemblyInfo.cs
+C:\Users\david\OneDrive\Desktop\Schule\Github\AdventOfCodePreset\obj\Debug\net7.0\AdventOfCodePreset.csproj.CoreCompileInputs.cache
