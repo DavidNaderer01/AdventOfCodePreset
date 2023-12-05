@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\OneDrive\\Desktop\\Schule\\Github\\AdventOfCodePreset\\AdventOfCodePreset.csproj": {}
+    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\Schule\\Github\\AoC\\AdventOfCodePreset.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\OneDrive\\Desktop\\Schule\\Github\\AdventOfCodePreset\\AdventOfCodePreset.csproj": {
+    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\Schule\\Github\\AoC\\AdventOfCodePreset.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Desktop\\Schule\\Github\\AdventOfCodePreset\\AdventOfCodePreset.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\Schule\\Github\\AoC\\AdventOfCodePreset.csproj",
         "projectName": "AdventOfCodePreset",
-        "projectPath": "C:\\Users\\david\\OneDrive\\Desktop\\Schule\\Github\\AdventOfCodePreset\\AdventOfCodePreset.csproj",
-        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\OneDrive\\Desktop\\Schule\\Github\\AdventOfCodePreset\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\Schule\\Github\\AoC\\AdventOfCodePreset.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\Schule\\Github\\AoC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
